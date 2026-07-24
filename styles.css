@@ -108,7 +108,7 @@ a{color:inherit;text-decoration:none}
 .nav:not(.scrolled) .nav__toggle span{background:#fff}
 
 /* ============================ HERO ============================ */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
 .hero__bg{position:absolute;inset:0;background:url("assets/hero-skyline.jpg") center 40%/cover no-repeat;animation:kb 24s ease-in-out infinite alternate;transform-origin:60% 60%}
 @keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.14)}}
 .hero__overlay{position:absolute;inset:0;background:
