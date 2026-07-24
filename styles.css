@@ -68,6 +68,8 @@ a{color:inherit;text-decoration:none}
 .btn--navy:hover{background:var(--navy-deep);transform:translateY(-2px)}
 .btn--ghost{border:1px solid rgba(255,255,255,.45);color:#fff}
 .btn--ghost:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+.btn--outline{border:1px solid var(--navy);color:var(--navy)}
+.btn--outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
 
 /* ============================ NAV ============================ */
 .nav{
