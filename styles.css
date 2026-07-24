@@ -190,7 +190,51 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--line);padding:4px 10px;border-radius:5px;
 }
 .pf-card.is-hidden{display:none}
+.pf-card{cursor:pointer}
+.pf-card__cta{
+  font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-deep);
+  display:inline-flex;align-items:center;gap:5px;opacity:0;transform:translateY(4px);
+  transition:opacity .3s var(--ease),transform .3s var(--ease);
+}
+.pf-card__cta::after{content:"\2192";font-size:1em}
+.pf-card:hover .pf-card__cta,.pf-card:focus-visible .pf-card__cta{opacity:1;transform:none}
+.pf-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .pf__empty{text-align:center;color:var(--muted);font-size:1rem;margin-top:20px}
+
+/* ---- project modal ---- */
+.pm{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;
+  opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s}
+.pm.open{opacity:1;visibility:visible}
+.pm__backdrop{position:absolute;inset:0;background:rgba(10,20,40,.72);backdrop-filter:blur(3px)}
+.pm__dialog{position:relative;z-index:1;width:min(920px,100%);max-height:90vh;overflow:auto;background:#fff;
+  border-radius:14px;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);
+  transform:translateY(16px) scale(.98);transition:transform .35s var(--ease);
+  display:grid;grid-template-columns:1.15fr 1fr}
+.pm.open .pm__dialog{transform:none}
+.pm__close{position:absolute;top:12px;right:14px;z-index:5;width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(255,255,255,.9);color:var(--navy);font-size:1.7rem;line-height:1;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px -4px rgba(0,0,0,.3);transition:background .2s,transform .2s}
+.pm__close:hover{background:#fff;transform:scale(1.06)}
+.pm__gallery{position:relative;background:#0f1620;min-height:280px;display:flex;align-items:center;justify-content:center}
+.pm__img{width:100%;height:100%;max-height:90vh;object-fit:cover;display:block}
+.pm__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:42px;height:42px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(255,255,255,.85);color:var(--navy);font-size:1.6rem;line-height:1;display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s}
+.pm__nav:hover{background:#fff}
+.pm__nav--prev{left:12px}
+.pm__nav--next{right:12px}
+.pm__nav.is-hidden{display:none}
+.pm__thumbs{position:absolute;bottom:10px;left:0;right:0;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:0 12px}
+.pm__thumbs button{width:9px;height:9px;border-radius:50%;border:0;padding:0;cursor:pointer;background:rgba(255,255,255,.5);transition:background .2s,transform .2s}
+.pm__thumbs button.is-active{background:#fff;transform:scale(1.25)}
+.pm__body{padding:40px 34px;display:flex;flex-direction:column}
+.pm__status{align-self:flex-start;text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;font-weight:700;
+  padding:5px 11px;border-radius:100px;background:var(--mist);color:var(--slate);margin-bottom:14px}
+.pm__status.is-active{background:rgba(41,171,226,.14);color:var(--blue-deep)}
+.pm__loc{font-size:.82rem;font-weight:600;color:var(--muted-light);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.pm__name{font-family:var(--disp);font-size:1.7rem;font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:16px}
+.pm__about{color:var(--muted);font-size:1rem;line-height:1.65}
+body.pm-open{overflow:hidden}
 
 /* ============================ TEAM ============================ */
 .team-tier__label{
@@ -256,6 +300,9 @@ a{color:inherit;text-decoration:none}
   .stats__grid{grid-template-columns:repeat(4,1fr);gap:18px 10px}
   .team-grid--ops{grid-template-columns:1fr 1fr}
   .contact{grid-template-columns:1fr;gap:34px}
+  .pm__dialog{grid-template-columns:1fr;max-height:92vh}
+  .pm__gallery{min-height:240px;max-height:42vh}
+  .pm__img{max-height:42vh}
 }
 @media(max-width:680px){
   .section{padding:70px 0}

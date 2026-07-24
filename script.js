@@ -99,6 +99,89 @@
     });
   }
 
+  /* ---- project modal ---- */
+  var modal = document.getElementById('projectModal');
+  var PROJECTS = window.NFP_PROJECTS || {};
+  if (modal) {
+    var pmImg = document.getElementById('pmImg');
+    var pmThumbs = document.getElementById('pmThumbs');
+    var pmPrev = document.getElementById('pmPrev');
+    var pmNext = document.getElementById('pmNext');
+    var pmName = document.getElementById('pmName');
+    var pmLoc = document.getElementById('pmLoc');
+    var pmStatus = document.getElementById('pmStatus');
+    var pmAbout = document.getElementById('pmAbout');
+    var gallery = [];
+    var idx = 0;
+    var lastFocused = null;
+
+    function showImg(i) {
+      if (!gallery.length) return;
+      idx = (i + gallery.length) % gallery.length;
+      pmImg.src = gallery[idx];
+      Array.prototype.forEach.call(pmThumbs.children, function (b, n) {
+        b.classList.toggle('is-active', n === idx);
+      });
+    }
+
+    function openProject(id) {
+      var p = PROJECTS[id];
+      if (!p) return;
+      gallery = (p.images && p.images.length) ? p.images.slice() : [];
+      pmName.textContent = p.title || '';
+      pmLoc.textContent = p.location || '';
+      pmAbout.textContent = p.about || '';
+      pmStatus.textContent = p.status || '';
+      pmStatus.classList.toggle('is-active', p.status === 'Active');
+      // build thumb dots
+      pmThumbs.innerHTML = '';
+      var multi = gallery.length > 1;
+      pmPrev.classList.toggle('is-hidden', !multi);
+      pmNext.classList.toggle('is-hidden', !multi);
+      if (multi) {
+        gallery.forEach(function (_, n) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', 'Image ' + (n + 1));
+          b.addEventListener('click', function () { showImg(n); });
+          pmThumbs.appendChild(b);
+        });
+      }
+      pmImg.alt = p.title || 'Project image';
+      showImg(0);
+      lastFocused = document.activeElement;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('pm-open');
+    }
+
+    function closeProject() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('pm-open');
+      pmImg.src = '';
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+    }
+
+    document.querySelectorAll('.pf-card[data-project]').forEach(function (card) {
+      card.addEventListener('click', function () { openProject(card.getAttribute('data-project')); });
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProject(card.getAttribute('data-project')); }
+      });
+    });
+    modal.querySelectorAll('[data-close]').forEach(function (el) {
+      el.addEventListener('click', closeProject);
+    });
+    pmPrev.addEventListener('click', function () { showImg(idx - 1); });
+    pmNext.addEventListener('click', function () { showImg(idx + 1); });
+    document.addEventListener('keydown', function (e) {
+      if (!modal.classList.contains('open')) return;
+      if (e.key === 'Escape') closeProject();
+      else if (e.key === 'ArrowLeft') showImg(idx - 1);
+      else if (e.key === 'ArrowRight') showImg(idx + 1);
+    });
+  }
+
   /* ---- active nav link on scroll ---- */
   var sections = ['approach', 'portfolio', 'team', 'contact'];
   var navAnchors = {};
