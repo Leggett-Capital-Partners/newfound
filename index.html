@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20260724e" />
+<link rel="stylesheet" href="styles.css?v=20260724f" />
 
 <!-- ============================ HEADER ============================ -->
 <header class="nav" id="nav">
@@ -58,7 +58,6 @@
     <div class="stats__grid">
       <div class="stat reveal"><div class="stat__num" data-count="9">9</div><div class="stat__label">Active investments</div></div>
       <div class="stat reveal"><div class="stat__num" data-count="10" data-suffix="+">10+</div><div class="stat__label">Realized projects</div></div>
-      <div class="stat reveal"><div class="stat__num" data-count="7">7</div><div class="stat__label">Asset classes</div></div>
       <div class="stat reveal"><div class="stat__num" data-count="5000" data-suffix="+">5,000+</div><div class="stat__label">Acres in development</div></div>
     </div>
   </div>
@@ -112,11 +111,9 @@
       <button class="pf__filter" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
       <button class="pf__filter" data-filter="land" role="tab" aria-selected="false">Land</button>
       <button class="pf__filter" data-filter="multifamily" role="tab" aria-selected="false">Multifamily</button>
-      <button class="pf__filter" data-filter="hospitality" role="tab" aria-selected="false">Hospitality</button>
       <button class="pf__filter" data-filter="industrial" role="tab" aria-selected="false">Industrial</button>
       <button class="pf__filter" data-filter="retail" role="tab" aria-selected="false">Retail</button>
       <button class="pf__filter" data-filter="office" role="tab" aria-selected="false">Office</button>
-      <button class="pf__filter" data-filter="power" role="tab" aria-selected="false">Power &amp; Renewables</button>
     </div>
 
     <div class="pf__grid" id="pfGrid">
@@ -133,12 +130,6 @@
         <div class="pf-card__tags"><span>Commercial</span><span>Land</span></div>
         <span class="pf-card__cta">View project</span>
       </article>
-      <article class="pf-card reveal" data-cat="hospitality" data-project="two-rivers-campground" role="button" tabindex="0" aria-haspopup="dialog">
-        <div class="pf-card__top"><span class="pf-card__status pf-card__status--active">Active</span><span class="pf-card__loc">Royalton, MN</span></div>
-        <h3 class="pf-card__name">Two Rivers Campground</h3>
-        <div class="pf-card__tags"><span>Hospitality</span></div>
-        <span class="pf-card__cta">View project</span>
-      </article>
       <article class="pf-card reveal" data-cat="multifamily" data-project="the-cortado" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="pf-card__top"><span class="pf-card__status pf-card__status--active">Active</span><span class="pf-card__loc">Austin, TX</span></div>
         <h3 class="pf-card__name">The Cortado</h3>
@@ -149,12 +140,6 @@
         <div class="pf-card__top"><span class="pf-card__status pf-card__status--active">Active</span><span class="pf-card__loc">Houston, TX</span></div>
         <h3 class="pf-card__name">Urban Land</h3>
         <div class="pf-card__tags"><span>Land</span></div>
-        <span class="pf-card__cta">View project</span>
-      </article>
-      <article class="pf-card reveal" data-cat="hospitality" data-project="traverse-city-koa-campground" role="button" tabindex="0" aria-haspopup="dialog">
-        <div class="pf-card__top"><span class="pf-card__status pf-card__status--active">Active</span><span class="pf-card__loc">Buckley, MI</span></div>
-        <h3 class="pf-card__name">Traverse City KOA Campground</h3>
-        <div class="pf-card__tags"><span>Hospitality</span></div>
         <span class="pf-card__cta">View project</span>
       </article>
       <article class="pf-card reveal" data-cat="commercial land multifamily retail" data-project="mixed-use-land-development" role="button" tabindex="0" aria-haspopup="dialog">
@@ -254,14 +239,6 @@
     <p class="team-tier__label">Co-Founders</p>
     <div class="team-grid team-grid--lead">
       <article class="member reveal">
-        <div class="member__photo"><img src="assets/team/john.jpg" alt="John Leggett" loading="lazy" /></div>
-        <div class="member__body">
-          <h3>John Leggett</h3>
-          <p class="member__role">Co-Founder</p>
-          <p class="member__bio">A visionary leader overseeing everything from site selection through property management. Founder of Leggett Ventures and On Point Custom Homes, and a Houston Business Journal &ldquo;40 Under 40&rdquo; honoree. Holds a Master&rsquo;s in Accounting and a BS in Business Administration from UNC Chapel Hill.</p>
-        </div>
-      </article>
-      <article class="member reveal">
         <div class="member__photo"><img src="assets/team/brad.jpg" alt="Brad Elmore" loading="lazy" /></div>
         <div class="member__body">
           <h3>Brad Elmore</h3>
@@ -269,32 +246,12 @@
           <p class="member__bio">Brings 15+ years of commercial real estate expertise, having completed over 300 transactions worth more than $3 billion. A former &ldquo;Power Broker&rdquo; and &ldquo;Heavy Hitter&rdquo; award recipient. MBA from Rice University and a BA from the University of Tennessee.</p>
         </div>
       </article>
-    </div>
-
-    <p class="team-tier__label">Partners</p>
-    <div class="team-grid team-grid--ops">
       <article class="member reveal">
-        <div class="member__photo"><img src="assets/team/earl.jpg" alt="Earl Correll" loading="lazy" /></div>
+        <div class="member__photo"><img src="assets/team/john.jpg" alt="John Leggett" loading="lazy" /></div>
         <div class="member__body">
-          <h3>Earl Correll</h3>
-          <p class="member__role">Development</p>
-          <p class="member__bio">President &amp; CEO of On Point Custom Homes with 15+ years working alongside John. Leads construction phases and property management operations across the portfolio.</p>
-        </div>
-      </article>
-      <article class="member reveal">
-        <div class="member__photo"><img src="assets/team/eric.jpg" alt="Eric Kline" loading="lazy" /></div>
-        <div class="member__body">
-          <h3>Eric Kline</h3>
-          <p class="member__role">Acquisitions</p>
-          <p class="member__bio">Focuses on multifamily, RV parks and marinas. Brings prior capital-raising experience from PinPoint Commercial and Berkadia.</p>
-        </div>
-      </article>
-      <article class="member reveal">
-        <div class="member__photo"><img src="assets/team/ashley.jpg" alt="Ashley Tucker Zatcoff" loading="lazy" /></div>
-        <div class="member__body">
-          <h3>Ashley Tucker Zatcoff</h3>
-          <p class="member__role">Operations &amp; Investor Relations</p>
-          <p class="member__bio">Oversees internal operations and investor relations, with a background in communications and project management.</p>
+          <h3>John Leggett</h3>
+          <p class="member__role">Co-Founder</p>
+          <p class="member__bio">A visionary leader overseeing everything from site selection through property management. Founder of Leggett Ventures and On Point Custom Homes, and a Houston Business Journal &ldquo;40 Under 40&rdquo; honoree. Holds a Master&rsquo;s in Accounting and a BS in Business Administration from UNC Chapel Hill.</p>
         </div>
       </article>
     </div>
