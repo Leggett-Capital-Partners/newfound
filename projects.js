@@ -1,7 +1,7 @@
 /* NewFound Partners — portfolio project data (photos + descriptions from newfoundpartners.com) */
 window.NFP_PROJECTS = {
   "67-6-acres-industrial": {
-    "title": "67.6 acres Industrial",
+    "title": "Mustang Ridge",
     "status": "Active",
     "location": "Austin, TX",
     "about": "67.7 acres located at the northeast corner of Highway 183 south and Toll Road 130 in the city of Mustang Ridge, TX. The property is zoned for industrial and commercial uses at an ideal logistics location in the south Austin MSA.",
@@ -11,7 +11,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "commercial-office-witte-rd": {
-    "title": "Commercial Office Witte Rd",
+    "title": "Witte Road",
     "status": "Active",
     "location": "Houston, TX",
     "about": "Commercial building development located in the heart of Spring Branch/Memorial. This 28,000 sq ft building was redeveloped from an abandoned Church and Gun Range into Class A commercial office space. A 2024 Houston Business Journal Landmark Award Finalist for Renovation.",
@@ -23,7 +23,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "mixed-use-land-development": {
-    "title": "Mixed-Use Land Development",
+    "title": "Dickinson",
     "status": "Active",
     "location": "Dickinson, TX",
     "about": "Twenty-six acres of mixed-use development including multifamily, retail, and parkland projects. Ideally positioned at the corner of FM 646 and FM 517 in Dickinson, Texas.",
@@ -42,7 +42,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "43-acres-commercial-land-development": {
-    "title": "43 Acres Commercial Land Development",
+    "title": "Applewhite Road",
     "status": "Realized",
     "location": "San Antonio, TX",
     "about": "Industrial land development site with 43 acres ideal for commercial distribution projects. Ideally positioned in Southwest San Antonio inside the outer loop.",
@@ -53,7 +53,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "1-900-acres-commercial-solar": {
-    "title": "1,900 acres Commercial/Solar",
+    "title": "Highway 288",
     "status": "Active",
     "location": "Rosharon, TX",
     "about": "Consisting of 1,900+ acres located in Brazoria County, TX, this tract of land sits 35 miles south of downtown Houston. The Property has 1.1 miles of frontage on Texas State Highway 288, with approximately 100 acres of commercial/industrial acreage fronting the highway and an under-construction 200mw solar farm on the adjoining 1,700 acres.",
@@ -72,7 +72,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "urban-industrial": {
-    "title": "Urban Industrial",
+    "title": "Campbell Road Industrial",
     "status": "Realized",
     "location": "Houston, TX",
     "about": "Over 5.5 acres of land just north of Houston’s expansive Energy Corridor in the rapidly growing Spring Branch district, this property hosts a large industrial building totaling approximately 25,000 square feet of gross rentable space.",
@@ -81,7 +81,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "dairy-queen": {
-    "title": "Dairy Queen",
+    "title": "Campbell Road Retail",
     "status": "Realized",
     "location": "Houston, TX",
     "about": "In the heart of Houston’s expansive Energy Corridor in the rapidly growing Spring Branch district, this property hosts a national retail tenant with 2,400 square feet of gross rentable space.",
@@ -92,7 +92,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "urban-office": {
-    "title": "Urban Office",
+    "title": "Essex Lane",
     "status": "Realized",
     "location": "Houston, TX",
     "about": "Nestled between Houston’s popular Highland Village and Greenway Plaza shopping and dining districts, this 8,000-square foot urban office building sits on a 23,800-square foot lot. Renovated upon acquisition, this multi-tenant building offers luxurious and modern amenities for all occupants.",
@@ -103,7 +103,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "infill-development": {
-    "title": "Infill Development",
+    "title": "West 20th Street",
     "status": "Realized",
     "location": "Houston, TX",
     "about": "Currently being used as an income-producing property, this urban infill site hosts an expansive gravel paid parking lot in the highly coveted Houston Heights neighborhood. Neighboring popular destination dining establishments, plans for future redevelopment include a gated community with 22 luxury 3-story patio homes.",
@@ -115,7 +115,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "urban-land": {
-    "title": "Urban Land",
+    "title": "Wakefield Drive",
     "status": "Active",
     "location": "Houston, TX",
     "about": "Located in the heart of Houston's Oak Forrest neighborhood this project features an inner-city 22,000 sq ft tract.",
@@ -179,7 +179,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "3-000-acres-land-development": {
-    "title": "3,000 acres Land Development",
+    "title": "Liberty Grand",
     "status": "Active",
     "location": "Dayton, TX",
     "about": "Consisting of 3,000 acres of master-planned community located in Liberty County, TX, this tract of land sits 30 miles northeast of downtown Houston and will eventually host 1.5 miles of frontage road on the next phase of Houston’s Grand Parkway. The property is entitled for two master planned communities and features all four corners of the intersection of Grand Parkway and Kingwood Drive.",
@@ -189,7 +189,7 @@ window.NFP_PROJECTS = {
     ]
   },
   "industrial": {
-    "title": "Industrial",
+    "title": "Highway 146",
     "status": "Realized",
     "location": "Dayton, TX",
     "about": "Located near the heart of downtown Dayton, TX directly off HWY 90, this industrial tract hosts over 16000 sq ft of warehouse and office space and is complete with 5 loading docks. Additionally, the 6+ acre tract hosts a 3.25 acres of stable yard and is complete with an on-site office suite and seperate storage facility.",

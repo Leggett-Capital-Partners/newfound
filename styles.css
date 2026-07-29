@@ -242,18 +242,19 @@ body.pm-open{overflow:hidden}
   color:var(--blue);margin:0 0 22px;text-align:center;
 }
 .team-grid{display:grid;gap:24px;margin-bottom:44px}
-.team-grid--lead{grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto}
+.team-grid--lead{grid-template-columns:1fr;max-width:640px;margin-inline:auto;gap:22px}
 .team-grid--ops{grid-template-columns:repeat(3,1fr)}
 .team-grid:last-child{margin-bottom:0}
 .member{
   background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:12px;overflow:hidden;
-  display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
+  display:flex;flex-direction:row;align-items:stretch;text-align:left;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
 .member:hover{transform:translateY(-5px);box-shadow:0 34px 60px -40px rgba(0,0,0,.7);border-color:rgba(41,171,226,.4)}
-.member__photo{aspect-ratio:4/3;overflow:hidden;background:#0f1620}
-.member__photo img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(.15);transition:transform .5s var(--ease),filter .5s}
+.member__photo{flex:0 0 210px;aspect-ratio:2/3;overflow:hidden;background:#0f1620}
+.member__photo img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(.12);transition:transform .5s var(--ease),filter .5s}
 .member:hover .member__photo img{transform:scale(1.04);filter:none}
-.member__body{padding:24px 22px 26px}
-.member__body h3{font-family:var(--disp);font-size:1.3rem;font-weight:700;color:#fff;line-height:1.15}
+.member__body{flex:1;padding:28px 28px;display:flex;flex-direction:column;justify-content:center}
+.member__body h3{font-family:var(--disp);font-size:1.35rem;font-weight:700;color:#fff;line-height:1.15}
 .member__role{color:var(--gold);font-weight:600;font-size:.9rem;margin:4px 0 12px;text-transform:uppercase;letter-spacing:.06em}
 .member__bio{color:rgba(255,255,255,.74);font-size:.94rem;line-height:1.6}
 
@@ -320,7 +321,9 @@ body.pm-open{overflow:hidden}
   .pillars{grid-template-columns:1fr}
   .pf__grid{grid-template-columns:1fr}
   .stats__grid{grid-template-columns:repeat(3,1fr);gap:22px 8px}
-  .team-grid--lead,.team-grid--ops{grid-template-columns:1fr}
+  .team-grid--ops{grid-template-columns:1fr}
+  .member{flex-direction:column}
+  .member__photo{flex:none;width:100%;aspect-ratio:4/5;max-height:420px}
   .footer__inner{flex-direction:column}
   .hero__sub{font-size:1.05rem}
 }
